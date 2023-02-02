@@ -417,7 +417,7 @@ Now, we are done with our work here and can stage and commit for this branch:
 
 >$ git add --all
 >
->$ git commit -m "added new image"
+>$ git commit -m "added new tutorial section"
 
 We see that git.md has been changed in both branches. Now we are ready to merge git-branch-tutorial into master. But what will happen to the changes we recently made in master?
 
