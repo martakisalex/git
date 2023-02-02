@@ -168,3 +168,42 @@ Using <font face="courier" style="color:coral">--all</font> instead of individua
 Now all 3 files are added to the Staging Environment, and we are ready to do our first <font face="courier" style="color:coral">commit</font>.
 
 **Note:** The shorthand command for <font face="courier" style="color:coral">git add --all</font> is <font face="courier" style="color:coral">git add -A</font>
+
+# Git Commit
+## Git Commit
+
+Since we have finished our work, we are ready move from <font face="courier" style="color:coral">stage</font> to <font face="courier" style="color:coral">commit</font> for our repo.
+
+Adding commits keep track of our progress and changes as we work. Git considers each <font face="courier" style="color:coral">commit</font> change point or "save point". It is a point in the project you can go back to if you find a bug, or want to make a change.
+
+When we <font face="courier" style="color:coral">commit</font>, we should **always** include a **message**.
+
+By adding clear messages to each <font face="courier" style="color:coral">commit</font>, it is easy for yourself (and others) to see what has changed and when.
+
+> git commit -m "First release of git tutorial"
+
+## Git Commit without Stage
+
+Sometimes, when you make small changes, using the staging environment seems like a waste of time. It is possible to commit changes directly, skipping the staging environment. The <font face="courier" style="color:coral">-a</font> option will automatically stage every changed, already tracked file.
+
+Let's add a small update to git.md:
+
+And check the status of our repository. But this time, we will use the --short option to see the changes in a more compact way:
+
+> git status --short
+
+**Note:** Short status flags are:
+
+* ?? - Untracked files
+* A - Files added to stage
+* M - Modified files
+* D - Deleted files
+
+We see the file we expected is modified. So let's commit it directly:
+
+>$ git commit -a -m "Updated git.md with a new tutorial section"
+
+<mark style="background-color:#FFCCCB">
+<b>Warning:</b> Skipping the Staging Environment is not generally recommended.
+Skipping the stage step can sometimes make you include unwanted changes.
+</mark>
