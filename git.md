@@ -382,6 +382,7 @@ Check the status:
 stage the file, and commit:
 
 >$ git add README.md
+>
 >$ git commit -m "updated README.md with emergency fix"
 
 Now we have a fix ready for master, and we need to merge the two branches.
