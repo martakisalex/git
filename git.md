@@ -361,9 +361,9 @@ See how easy it is to work with branches? And how this allows you to work on dif
 
 ## Emergency Branch
 
-Now imagine that we are not yet done with hello-world-images, but we need to fix an error on master.
+Now imagine that we are not yet done with git-branch-tutorial, but we need to fix an error on master.
 
-I don't want to mess with master directly, and I do not want to mess with hello-world-images, since it is not done yet.
+I don't want to mess with master directly, and I do not want to mess with git-branch-tutorial, since it is not done yet.
 
 So we create a new branch to deal with the emergency:
 
@@ -382,6 +382,71 @@ Check the status:
 stage the file, and commit:
 
 >$ git add README.md
+>
 >$ git commit -m "updated README.md with emergency fix"
 
 Now we have a fix ready for master, and we need to merge the two branches.
+
+# Git Branch Merge
+
+## Merge Branches
+
+We have the emergency fix ready, and so let's merge the master and emergency-fix branches.
+
+First, we need to change to the master branch:
+
+>$ git checkout master
+
+Now we merge the current branch (master) with emergency-fix:
+
+>$ git merge emergency-fix
+
+Since the emergency-fix branch came directly from master, and no other changes had been made to master while we were working, Git sees this as a continuation of master. So it can "Fast-forward", just pointing both master and emergency-fix to the same commit.
+
+As master and emergency-fix are essentially the same now, we can delete emergency-fix, as it is no longer needed:
+
+>$ git branch -d emergency-fix
+
+## Merge Conflict
+
+Now we can move over to git-branch-tutorial and keep working by adding a new section of the tutorial.
+
+>$ git checkout git-branch-tutorial
+
+Now, we are done with our work here and can stage and commit for this branch:
+
+>$ git add --all
+>
+>$ git commit -m "added new image"
+
+We see that git.md has been changed in both branches. Now we are ready to merge git-branch-tutorial into master. But what will happen to the changes we recently made in master?
+
+>$ git checkout master
+>
+>$ merge git-branch-tutorial
+
+The merge failed, as there is conflict between the versions for git.md. Let us check the status:
+
+>$ git status
+
+This confirms there is a conflict in index.html, but the image files are ready and staged to be committed.
+
+So we need to fix that conflict. Open the file in our editor:
+
+We can see the differences between the versions and edit it like we want:
+
+Now we can stage git.md and check the status:
+
+>$ git add git.md
+>
+>$ git status
+
+The conflict has been fixed, and we can use commit to conclude the merge:
+
+>$ git commit -m "Merge with git-branch-tutorial after fixing conflicts"
+
+And delete the git-branch-tutorial branch:
+
+>$ git brnach -d git-branch-tutorial
+
+Now you have a better understanding of how branches and merging works. Time to start working with a remote repository!
