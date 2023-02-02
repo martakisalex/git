@@ -361,9 +361,9 @@ See how easy it is to work with branches? And how this allows you to work on dif
 
 ## Emergency Branch
 
-Now imagine that we are not yet done with hello-world-images, but we need to fix an error on master.
+Now imagine that we are not yet done with git-branch-tutorial, but we need to fix an error on master.
 
-I don't want to mess with master directly, and I do not want to mess with hello-world-images, since it is not done yet.
+I don't want to mess with master directly, and I do not want to mess with git-branch-tutorial, since it is not done yet.
 
 So we create a new branch to deal with the emergency:
 
