@@ -712,3 +712,107 @@ The pull request will record the changes, which means you can go through them la
 To keep the repo from getting overly complicated, you can delete the now unused branch by clicking "Delete branch".
 
 An after you confirm that the changes from the previous branch were included, delete that as well.
+
+# Git GitHub Flow
+
+## Working using the GitHub Flow
+
+On this page, you will learn how to get the best out of working with GitHub.
+
+The GitHub flow is a workflow designed to work well with Git and GitHub.
+
+It focuses on branching and makes it possible for teams to experiment freely, and make deployments regularly.
+
+The GitHub flow works like this:
+
+* Create a new Branch
+* Make changes and add Commits
+* Open a Pull Request
+* Review
+* Deploy
+* Merge
+
+You should already have a good understanding of how this works from the previous chapters. This chapter focuses on understanding how the flow makes it easy for you to work together.
+
+## Create a New Branch
+
+Branching is the key concept in Git. And it works around the rule that the master branch is ALWAYS deployable.
+
+That means, if you want to try something new or experiment, you create a new branch! Branching gives you an environment where you can make changes without affecting the main branch.
+
+When your new branch is ready, it can be reviewed, discussed, and merged with the main branch when ready.
+
+When you make a new branch, you will (almost always) want to make it from the master branch.
+
+***Note:** Keep in mind that you are working with others. Using descriptive names for new branches, so everyone can understand what is happening.*
+
+## Make Changes and Add Commits
+
+After the new branch is created, it is time to get to work. Make changes by adding, editing and deleting files. Whenever you reach a small milestone, add the changes to your branch by commit.
+
+Adding commits keeps track of your work. Each commit should have a message explaining what has changed and why. Each commit becomes a part of the history of the branch, and a point you can revert back to if you need to.
+
+***Note:** commit messages are very important! Let everyone know what has changed and why. Messages and comments make it so much easier for yourself and other people to keep track of changes.*
+
+## Open a Pull Request
+
+Pull requests are a key part of GitHub. A Pull Request notifies people you have changes ready for them to consider or review.
+
+You can ask others to review your changes or pull your contribution and merge it into their branch.
+
+## Review
+When a Pull Request is made, it can be reviewed by whoever has the proper access to the branch. This is where good discussions and review of the changes happen.
+
+Pull Requests are designed to allow people to work together easily and produce better results together!
+
+If you receive feedback and continue to improve your changes, you can push your changes with new commits, making further reviews possible.
+
+***Note:** GitHub shows new commit and feedback in the "unified Pull Request view".*
+
+## Deploy
+When the pull request has been reviewed and everything looks good, it is time for the final testing. GitHub allows you to deploy from a branch for final testing in production before merging with the master branch.
+
+If any issues arise, you can undo the changes by deploying the master branch into production again!
+
+***Note:** Teams often have dedicated testing environments used for deploying branches.*
+
+## Merge
+After exhaustive testing, you can merge the code into the master branch!
+
+Pull Requests keep records of changes to your code, and if you commented and named changes well, you can go back and understand why changes and decisions were made.
+
+***Note:** You can add keywords to your pull request for easier searching!*
+
+# Git GitHub Pages
+
+## Host Your Page on GitHub
+
+With GitHub pages, GitHub allows you to host a webpage from your repository. Let's try to use GitHub Pages to host our repository.
+
+## Create a New Repository
+
+Start by signing in to GitHub. GitHub pages need a special name and setup to work, so we start by creating a new repository.
+
+This repository needs a special name to function as a GitHub page. It needs to be your GitHub <font face="courier" style="color:coral">username</font>, followed by <font face="courier" style="color:coral">.github.io</font>.
+
+## Push Local Repository to GitHub Pages
+
+We add this new repository as a remote for our local repository, we are calling it <font face="courier" style="color:coral">gh-page</font> (for GitHub Pages).
+
+Copy the <font face="courier" style="color:coral">URL</font> from the Quick setup.
+
+And add it as a new <font face="courier" style="color:coral">remote</font>.
+> git remote add gh-page https://github.com/w3schools-test/w3schools-test.github.io.git
+
+Make sure you are on the <font face="courier" style="color:coral">master</font> <font face="courier" style="color:coral">branch</font>, then push the <font face="courier" style="color:coral">master</font> <font face="courier" style="color:coral">branch</font> to the new <font face="courier" style="color:coral">remote</font>:
+> git push gh-page master
+
+***Note:** If this is the first time you are connecting to GitHub, you will get some kind of notification to authenticate this connection.*
+
+Check that the new repository has received all the files:
+
+## Check Out Your Own GitHub Page
+
+That looks good, now click the Settings menu and navigate to the Pages tab:
+
+The GitHub page is created, and you can click the URL to view the result!
