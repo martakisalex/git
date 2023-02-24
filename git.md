@@ -629,7 +629,7 @@ Lets <font face="courier" style="color:coral">pull</font> from our GitHub reposi
 
 >git pull
 
-Now our main <font face="courier" style="color:coral">branch</font> is up todate. And we can see that there is a new <font face="courier" style="color:coral">branch</font> available on GitHub.
+Now our main <font face="courier" style="color:coral">branch</font> is up-to-date. And we can see that there is a new <font face="courier" style="color:coral">branch</font> available on GitHub.
 
 Do a quick <font face="courier" style="color:coral">status</font>:
 
