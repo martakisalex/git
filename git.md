@@ -500,3 +500,101 @@ Now we are going to push our master branch to the origin url, and set it as the 
 
 Now, go back into GitHub and see that the repository has been updated.
 
+
+# Git GitHub Edit Code
+
+In addition to being a host for Git content, GitHub has a very good code editor.
+
+Let's try to edit the README.md file in GitHub. Just click the edit button.
+
+Add some changes to the code, and then <font face="courier" style="color:coral">commit</font> the changes. For now, we will "Commit directly to the master branch".
+
+Remember to add a description for the <font face="courier" style="color:coral">commit</font>.
+
+That is how you edit code directly in GitHub.
+
+# Git Pull from GitHub
+
+## Pulling to Keep up-to-date with Changes
+
+When working as a team on a project, it is important that everyone stays up to date.
+
+Any time you start working on a project, you should get the most recent changes to your local copy.
+
+With Git, you can do that with <font face="courier" style="color:coral">pull</font>.
+
+<font face="courier" style="color:coral">pull</font> is a combination of 2 different commands:
+
+* <font face="courier" style="color:coral">fetch</font>
+* <font face="courier" style="color:coral">merge</font>
+
+Let's take a closer look into how <font face="courier" style="color:coral">fetch</font>, <font face="courier" style="color:coral">merge</font>, and <font face="courier" style="color:coral">pull</font> works.
+
+## Git Fetch
+
+<font face="courier" style="color:coral">fetch</font> gets all the change history of a tracked branch/repo.
+
+So, on your local Git, <font face="courier" style="color:coral">fetch</font> updates to see what has changed on GitHub:
+
+> git fetch origin
+
+Now that we have the recent <font face="courier" style="color:coral">changes</font>, we can check our <font face="courier" style="color:coral">status</font>:
+
+> git status
+
+We are behind the <font face="courier" style="color:coral">origin/master</font> by 1 <font face="courier" style="color:coral">commit</font>. That should be the updated <font face="courier" style="color:coral">README.md</font>, but lets double check by viewing the <font face="courier" style="color:coral">log</font>:
+
+> git log origin/master
+
+That looks as expected, but we can also verify by showing the differences between our local <font face="courier" style="color:coral">master</font> and <font face="courier" style="color:coral">origin/master</font>:
+
+> git diff origin/master
+
+That looks precisely as expected! Now we can safely <font face="courier" style="color:coral">merge</font>.
+
+## Git Merge
+
+<font face="courier" style="color:coral">merge</font> combines the current branch, with a specified branch.
+
+We have confirmed that the updates are as expected, and we can merge our current branch (<font face="courier" style="color:coral">master</font>) with <font face="courier" style="color:coral">origin/master</font>:
+
+> git merge origin/master
+
+Check our <font face="courier" style="color:coral">status</font> again to confirmwe are up to date:
+
+> git status
+
+There! Your local git is up to date!
+
+## Git Pull
+
+But what if you just want to update your local repository, without going through all those steps?
+
+<font face="courier" style="color:coral">pull</font> is a combination of <font face="courier" style="color:coral">fetch</font> and <font face="courier" style="color:coral">merge</font>. It is used to pull all changes from a remote repository into the branch you are working on.
+
+Make another change to the Readme.md file on GitHub.
+
+Use <font face="courier" style="color:coral">pull</font> to update our local Git:
+
+> git pull origin
+
+That is how you keep your local Git up to date from a remote repository. In the next chapter, we will look closer at how <font face="courier" style="color:coral">push</font> works on GitHub.
+
+# Git Push to GitHub
+
+## Push Changes to GitHub
+
+Let's try making some changes to our local git and pushing them to GitHub.
+
+Edit the README.md
+
+Commit the changes:
+> git commit -a -m "Update README.md."
+
+And check the status:
+> git status
+
+Now push our changes to our remote origin:
+> git push origin
+
+Go to GitHub, and confirm that the repository has a new commit.
