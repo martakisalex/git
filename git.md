@@ -598,3 +598,65 @@ Now push our changes to our remote origin:
 > git push origin
 
 Go to GitHub, and confirm that the repository has a new commit.
+
+# Git GitHub Branch
+
+## [Create a New Branch on GitHub](https://www.w3schools.com/git/git_remote_branch.asp?remote=github)
+
+On GitHub, access your respository and click the "master" branch button.
+
+There you can create a new Branch. Type in a descriptive name, and click Create branch.
+
+Let's call the branch, "<font face="courier" style="color:coral">readme</font>"
+
+The <font face="courier" style="color:coral">branch</font> should now be created and active. You can confirm which branch you are working on by looking at the branch button. See that it now says "readme" instead of "main"?
+
+Start working on an existing file in this branch. Click the "<font face="courier" style="color:coral">README.md</font>" file and start editing.
+
+After you have finished editing the file, you can click the "Preview changes" tab to see the changes you made highlighted.
+
+If you are happy with the change, add a comment that explains what you did, and click Commit changes.
+
+You now have a new <font face="courier" style="color:coral">branch</font> on GitHub, updated with some changes!
+
+# Git Pull Branch from GitHub
+
+## Pulling a Branch from GitHub
+
+Now continue working on our new <font face="courier" style="color:coral">branch</font> in our local Git.
+
+Lets <font face="courier" style="color:coral">pull</font> from our GitHub repository again so that our code is up-to-date:
+
+>git pull
+
+Now our main <font face="courier" style="color:coral">branch</font> is up todate. And we can see that there is a new <font face="courier" style="color:coral">branch</font> available on GitHub.
+
+Do a quick <font face="courier" style="color:coral">status</font>:
+
+>git status
+
+And confirm which branches we have, and where we are working at the moment:
+
+>git branch
+
+So, we do not have the new <font face="courier" style="color:coral">branch</font> on our local Git. But we know it is available on GitHub. So we can use the <font face="courier" style="color:coral">-a</font> option to see all local and remote branches:
+
+>git branch -a
+
+*Note: <font face="courier" style="color:coral">branch -r</font> is for remote brances only.*
+
+We see that the branch <font face="courier" style="color:coral">readme</font> is available remotely, but not on our local git. Lets check it out:
+
+>git checkout readme
+
+And check if it is all up to date:
+
+>git pull
+
+Which branches fo we have now, and where are we working from?
+
+>git branch
+
+Now, open your favourite editor and confirm that the changes from the GitHub branch carried over.
+
+That is how you pull a GitHub branch to your local Git.
