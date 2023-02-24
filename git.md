@@ -647,13 +647,13 @@ So, we do not have the new <font face="courier" style="color:coral">branch</font
 
 We see that the branch <font face="courier" style="color:coral">readme</font> is available remotely, but not on our local git. Lets check it out:
 
->git checkout readme
+>git checkout update-git
 
 And check if it is all up to date:
 
 >git pull
 
-Which branches fo we have now, and where are we working from?
+Which branches do we have now, and where are we working from?
 
 >git branch
 
