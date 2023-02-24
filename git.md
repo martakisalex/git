@@ -607,9 +607,9 @@ On GitHub, access your respository and click the "master" branch button.
 
 There you can create a new Branch. Type in a descriptive name, and click Create branch.
 
-Let's call the branch, "<font face="courier" style="color:coral">readme</font>"
+Let's call the branch, "<font face="courier" style="color:coral">update-git</font>"
 
-The <font face="courier" style="color:coral">branch</font> should now be created and active. You can confirm which branch you are working on by looking at the branch button. See that it now says "readme" instead of "main"?
+The <font face="courier" style="color:coral">branch</font> should now be created and active. You can confirm which branch you are working on by looking at the branch button. See that it now says "update-git" instead of "main"?
 
 Start working on an existing file in this branch. Click the "<font face="courier" style="color:coral">README.md</font>" file and start editing.
 
@@ -660,3 +660,55 @@ Which branches fo we have now, and where are we working from?
 Now, open your favourite editor and confirm that the changes from the GitHub branch carried over.
 
 That is how you pull a GitHub branch to your local Git.
+
+# Git Push Branch to GitHub
+
+## Push a Branch to GitHub
+
+Let's try to create a new local branch, and push that to GitHub.
+
+Start by creating a branch, like we did earlier:
+
+>git checkout -b update-readme
+
+And we make some changes to the README.md file. Just add a new line.
+
+So now we check the <font face="courier" style="color:coral">status</font> of the current branch.
+
+>git status
+
+We see that <font face="courier" style="color:coral">README.md</font> is modified but not added to the Staging Environment:
+
+>git add README.md
+
+Check the <font face="courier" style="color:coral">status</font> of the branch:
+
+>git status
+
+We are happy with our changes. So we will <font face="courier" style="color:coral">commit</font> them to the <font face="courier" style="color:coral">branch</font>:
+
+>git commit -m "Update readme for GitHub Branches"
+
+Now <font face="courier" style="color:coral">push</font> the <font face="courier" style="color:coral">branch</font> from our local Git repository, to GitHub, where everyone can see the changes:
+
+>git push origin update-readme
+
+Go to GitHub, and confirm that the repository has a new <font face="courier" style="color:coral">branch</font>.
+
+In GitHub, we can now see the changes and <font face="courier" style="color:coral">merge</font> them into the master <font face="courier" style="color:coral">branch</font> if we approve it.
+
+If you click the "Compare & pull request", you can go through the changes made and new files added.
+
+Note: This comparison shows both the changes from <font face="courier" style="color:coral">update-readme</font> and <font face="courier" style="color:coral">update-git</font> because we created the new branch FROM <font face="courier" style="color:coral">update-git</font>.
+
+If the changes look good, you can go forward, creating a <font face="courier" style="color:coral">pull request</font>.
+
+A pull request is how you propose changes. You can ask some to review your changes or pull your contribution and merge it into their branch.
+
+Since this is your own repository, you can  <font face="courier" style="color:coral">merge</font> your pull request yourself:
+
+The pull request will record the changes, which means you can go through them later to figure out the changes made.
+
+To keep the repo from getting overly complicated, you can delete the now unused branch by clicking "Delete branch".
+
+An after you confirm that the changes from the previous branch were included, delete that as well.
