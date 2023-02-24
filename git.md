@@ -3,14 +3,24 @@
 This markdown explains how to use Git and how to use it on remote repository platforms, like GitHub.
 
 # Table of Contents
-* [Git and GitHub Introduction](#git-and-github-introduction)
-* [Git Getting Started](#git-getting-started)
-* [Git New Files](#git-new-files)
-* [Git Staging Environment](#git-staging-environment)
-* [Git Commit](#git-commit)
-* [Git Help](#git-help)
-* [Git Branch](#git-branch)
-* [Git Branch Merge](#git-branch-merge)
+* [Git Tutorial](#git-tutorial)
+  * [Git and GitHub Introduction](#git-and-github-introduction)
+  * [Git Getting Started](#git-getting-started)
+  * [Git New Files](#git-new-files)
+  * [Git Staging Environment](#git-staging-environment)
+  * [Git Commit](#git-commit)
+  * [Git Help](#git-help)
+  * [Git Branch](#git-branch)
+  * [Git Branch Merge](#git-branch-merge)
+* [Git and GitHub](#git-and-github)
+  * [GitHub Getting Started](#github-getting-started)
+  * [Git Pull from GitHub](#git-pull-from-github)
+  * [Git Push to GitHub](#git-push-to-github)
+  * [Git GitHub Branch](#git-github-branch)
+  * [Git Pull Branch from GitHub](#git-pull-branch-from-github)
+  * [Git Push Branch to GitHub](#git-push-branch-to-github)
+  * [Git GitHub Flow](#git-github-flow)
+  * [Git GitHub Pages](#git-github-pages)
 
 ## References
 * [Git Tutorial](https://www.w3schools.com/git/default.asp)
@@ -21,9 +31,11 @@ This markdown explains how to use Git and how to use it on remote repository pla
 ## Repo
 > https://github.com/Sikatram/git/
 
-# Git and GitHub Introduction
+# Git Tutorial
 
-## What is git?
+## Git and GitHub Introduction
+
+### What is Git?
 
 Git is a popular version control system. It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then.
 
@@ -32,7 +44,7 @@ It is used for:
 * Tracking who made changes
 * Coding collaboration
 
-## What does Git do?
+### What does Git do?
 * Manage projects with **Repositories**
 * **Clone** a project to work on a local copy
 * Control and track changes with **Staging** and **Committing**
@@ -40,7 +52,7 @@ It is used for:
 * **Pull** the latest version of the project to a local copy
 * **Push** local updates to the main project
 
-## Working with Git
+### Working with Git
 * Initialize Git on a folder, making it a **Repository**
 * Git now creates a hidden folder to keep track of change in that folder
 * When a file is changed, added or deleted, it is considered **modified**
@@ -50,24 +62,24 @@ It is used for:
 * You can revert back to any previous commit
 * Git does not store a separate copy of every file in every commit, but keeps track of changes made in each commit!
 
-## Why Git?
+### Why Git?
 * Over 70% of developers use Git
 * Developers can work together from anywhere in the world
 * Developers can see the full history of the project
 * Developers can revert to earlier versions of a project
 
-## What is GitHub?
+### What is GitHub?
 * Git is not the same as GitHub
 * GitHub makes tools that use Git
 * GitHub is the largest host of source code in the world, and has been owned by Microsoft since 2018
 
-# Git Getting Started
+## Git Getting Started
 
-## Git Install
+### Git Install
 
 You can download Git for free from the following website: https://www.git-scm.com/
 
-## Using Git with Command Line
+### Using Git with Command Line
 
 To start using Git, we are first going to open up our Command shell.
 
@@ -79,7 +91,7 @@ The first thing we need to do, is to check if Git is properly installed:
 
 If Git is installed, it should show something along the lines of git version X.Y
 
-## Configure git
+### Configure Git
 
 Now let Git know who you are. This is important for version control systems, as each Git commit uses this information:
 
@@ -91,7 +103,7 @@ Change the user name and e-mail address to your own. You will probably also want
 
 *Note: Use <font face="Courier" style="color:coral">global</font> to set the username and e-mail for every repository on your computer. If you want to set the username/e-mail for just the current repo, you can remove <font face="Courier" style="color:coral">global</font>*
 
-## Creating Git Folder
+### Creating Git Folder
 
 Create a new folder for your project:
 
@@ -107,7 +119,7 @@ Now that you are in the correct directory, you can start by initializing Git
 
 *Note: If you already have a folder/directory you would like to use for Git, navigate to it in command line, or open it in your file explorer, right-click and select "Git Bash here"*
 
-## Initialize Git
+### Initialize Git
 
 Once you have navigated to the correct folder, you can initialize Git on that folder:
 
@@ -118,8 +130,8 @@ Once you have navigated to the correct folder, you can initialize Git on that fo
   Note: Git now knows that it should watch the folder you initiated it on. 
 Git creates a hidden folder to keep track of changes.*
 
-# Git New Files
-## Git Adding New Files
+## Git New Files
+### Git Adding New Files
 
 You just created your first local Git repo. But it is empty.
 
@@ -144,8 +156,8 @@ Files in your Git repository folder can be in one of 2 states:
 
 When you first add files to an empty repository, they are all untracked. To get Git to track them, you need to stage them, or add them to the staging environment.
 
-# Git Staging Environment
 ## Git Staging Environment
+### Git Staging Environment
 
 One of the core functions of Git is the concepts of the Staging Environment, and the Commit.
 
@@ -163,7 +175,7 @@ The file should be Staged. Let's check the status::
 
 Now the file has been added to the Staging Environment.
 
-## Git Add More than One File
+### Git Add More than One File
 
 You can also stage more than one file at a time. Let's add 2 more files to our working folder. Use the text editor again.
 
@@ -181,8 +193,8 @@ Now all 3 files are added to the Staging Environment, and we are ready to do our
 
 **Note:** The shorthand command for <font face="courier" style="color:coral">git add --all</font> is <font face="courier" style="color:coral">git add -A</font>
 
-# Git Commit
 ## Git Commit
+### Git Commit
 
 Since we have finished our work, we are ready move from <font face="courier" style="color:coral">stage</font> to <font face="courier" style="color:coral">commit</font> for our repo.
 
@@ -194,7 +206,7 @@ By adding clear messages to each <font face="courier" style="color:coral">commit
 
 > git commit -m "First release of git tutorial"
 
-## Git Commit without Stage
+### Git Commit without Stage
 
 Sometimes, when you make small changes, using the staging environment seems like a waste of time. It is possible to commit changes directly, skipping the staging environment. The <font face="courier" style="color:coral">-a</font> option will automatically stage every changed, already tracked file.
 
@@ -220,14 +232,14 @@ We see the file we expected is modified. So let's commit it directly:
 Skipping the stage step can sometimes make you include unwanted changes.
 </mark>
 
-## Git Commit Log
+### Git Commit Log
 
 To view the history of commits for a repository, you can use the <font face="courier" style="color:coral">log</font> command:
 
 >$ git log
 
-# Git Help
 ## Git Help
+### Git Help
 
 If you are having trouble remembering commands or options for commands, you can use Git <font face="courier" style="color:coral">help</font>.
 
@@ -238,7 +250,7 @@ There are a couple of different ways you can use the <font face="courier" style=
 
 Let's go over the different commands.
 
-## Git -help See Options for a Specific Command
+### Git -help See Options for a Specific Command
 
 Any time you need some help remembering the specific option for a command, you can use <font face="courier" style="color:coral">git command -help</font>:
 
@@ -246,7 +258,7 @@ Any time you need some help remembering the specific option for a command, you c
 
 **Note:** You can also use --help instead of -help to open the relevant Git manual page
 
-## Git help --all See All Possible Commands
+### Git help --all See All Possible Commands
 
 To list all possible commands, use the <font face="courier" style="color:coral">help --all</font> command:
 
@@ -258,9 +270,9 @@ To list all possible commands, use the <font face="courier" style="color:coral">
 
 **Note:** If you find yourself stuck in the list view, <font face="courier" style="color:coral">SHIFT + G</font> to jump the end of the list, then <font face="courier" style="color:coral">q</font> to exit the view.
 
-# Git Branch
+## Git Branch
 
-## Working with Git Branches
+### Working with Git Branches
 
 In Git, a <font face="courier" style="color:coral">branch</font> is a new/separate version of the main repository.
 
@@ -297,7 +309,7 @@ You can even switch between branches and work on different projects without them
 
 Branching in Git is very lightweight and fast!
 
-## New Git Branch
+### New Git Branch
 
 Let's add some content to our <font face="courier" style="color:coral">git.md</font> page.
 
@@ -351,7 +363,7 @@ Now we have a new <font face="courier" style="color:coral">branch</font>, that i
 
 **Note:** Using the <font face="courier" style="color:coral">-b</font> option on <font face="courier" style="color:coral">checkout</font> will create a new branch, and move to it, if it does not exist
 
-## Switching Between Branches
+### Switching Between Branches
 
 Now let's see just how quick and easy it is to work with different branches, and how well it works.
 
@@ -371,7 +383,7 @@ If we open the md file, we can see the text reverted to what it was before the a
 
 See how easy it is to work with branches? And how this allows you to work on different things?
 
-## Emergency Branch
+### Emergency Branch
 
 Now imagine that we are not yet done with git-branch-tutorial, but we need to fix an error on master.
 
@@ -399,9 +411,9 @@ stage the file, and commit:
 
 Now we have a fix ready for master, and we need to merge the two branches.
 
-# Git Branch Merge
+## Git Branch Merge
 
-## Merge Branches
+### Merge Branches
 
 We have the emergency fix ready, and so let's merge the master and emergency-fix branches.
 
@@ -419,7 +431,7 @@ As master and emergency-fix are essentially the same now, we can delete emergenc
 
 >$ git branch -d emergency-fix
 
-## Merge Conflict
+### Merge Conflict
 
 Now we can move over to git-branch-tutorial and keep working by adding a new section of the tutorial.
 
@@ -463,16 +475,18 @@ And delete the git-branch-tutorial branch:
 
 Now you have a better understanding of how branches and merging works. Time to start working with a remote repository!
 
-# GitHub Getting Started
+# Git and GitHub
 
-## GitHub Account
+## GitHub Getting Started
+
+### GitHub Account
 
 Go to [GitHub](https://github.com/) and sign up for an account.
 
 ***Note:** Remember to use the same e-mail address you used in the Git config.*
 
 
-## Create a Repository on GitHub
+### Create a Repository on GitHub
 
 Now that you have made a GitHub account, sign in, and create a new Repo and fill in the relevant details.
 
@@ -480,7 +494,7 @@ We will go over the different options and what they mean later. But for now, cho
 
 Then click "Create repository".
 
-## Push Local Repository to GitHub
+### Push Local Repository to GitHub
 
 Since we have already set up a local Git repo, we are going to <font face="courier" style="color:coral">push</font> that to GitHub.
 
@@ -501,7 +515,9 @@ Now we are going to push our master branch to the origin url, and set it as the 
 Now, go back into GitHub and see that the repository has been updated.
 
 
-# Git GitHub Edit Code
+## Git GitHub Edit Code
+
+### Edit Code in GitHub
 
 In addition to being a host for Git content, GitHub has a very good code editor.
 
@@ -513,9 +529,9 @@ Remember to add a description for the <font face="courier" style="color:coral">c
 
 That is how you edit code directly in GitHub.
 
-# Git Pull from GitHub
+## Git Pull from GitHub
 
-## Pulling to Keep up-to-date with Changes
+### Pulling to Keep up-to-date with Changes
 
 When working as a team on a project, it is important that everyone stays up to date.
 
@@ -530,7 +546,7 @@ With Git, you can do that with <font face="courier" style="color:coral">pull</fo
 
 Let's take a closer look into how <font face="courier" style="color:coral">fetch</font>, <font face="courier" style="color:coral">merge</font>, and <font face="courier" style="color:coral">pull</font> works.
 
-## Git Fetch
+### Git Fetch
 
 <font face="courier" style="color:coral">fetch</font> gets all the change history of a tracked branch/repo.
 
@@ -552,7 +568,7 @@ That looks as expected, but we can also verify by showing the differences betwee
 
 That looks precisely as expected! Now we can safely <font face="courier" style="color:coral">merge</font>.
 
-## Git Merge
+### Git Merge
 
 <font face="courier" style="color:coral">merge</font> combines the current branch, with a specified branch.
 
@@ -566,7 +582,7 @@ Check our <font face="courier" style="color:coral">status</font> again to confir
 
 There! Your local git is up to date!
 
-## Git Pull
+### Git Pull
 
 But what if you just want to update your local repository, without going through all those steps?
 
@@ -580,9 +596,9 @@ Use <font face="courier" style="color:coral">pull</font> to update our local Git
 
 That is how you keep your local Git up to date from a remote repository. In the next chapter, we will look closer at how <font face="courier" style="color:coral">push</font> works on GitHub.
 
-# Git Push to GitHub
+## Git Push to GitHub
 
-## Push Changes to GitHub
+### Push Changes to GitHub
 
 Let's try making some changes to our local git and pushing them to GitHub.
 
@@ -599,9 +615,9 @@ Now push our changes to our remote origin:
 
 Go to GitHub, and confirm that the repository has a new commit.
 
-# Git GitHub Branch
+## Git GitHub Branch
 
-## [Create a New Branch on GitHub](https://www.w3schools.com/git/git_remote_branch.asp?remote=github)
+### [Create a New Branch on GitHub](https://www.w3schools.com/git/git_remote_branch.asp?remote=github)
 
 On GitHub, access your respository and click the "master" branch button.
 
@@ -619,9 +635,9 @@ If you are happy with the change, add a comment that explains what you did, and 
 
 You now have a new <font face="courier" style="color:coral">branch</font> on GitHub, updated with some changes!
 
-# Git Pull Branch from GitHub
+## Git Pull Branch from GitHub
 
-## Pulling a Branch from GitHub
+### Pulling a Branch from GitHub
 
 Now continue working on our new <font face="courier" style="color:coral">branch</font> in our local Git.
 
@@ -661,9 +677,9 @@ Now, open your favourite editor and confirm that the changes from the GitHub bra
 
 That is how you pull a GitHub branch to your local Git.
 
-# Git Push Branch to GitHub
+## Git Push Branch to GitHub
 
-## Push a Branch to GitHub
+### Push a Branch to GitHub
 
 Let's try to create a new local branch, and push that to GitHub.
 
@@ -713,9 +729,9 @@ To keep the repo from getting overly complicated, you can delete the now unused 
 
 An after you confirm that the changes from the previous branch were included, delete that as well.
 
-# Git GitHub Flow
+## Git GitHub Flow
 
-## Working using the GitHub Flow
+### Working using the GitHub Flow
 
 On this page, you will learn how to get the best out of working with GitHub.
 
@@ -734,7 +750,7 @@ The GitHub flow works like this:
 
 You should already have a good understanding of how this works from the previous chapters. This chapter focuses on understanding how the flow makes it easy for you to work together.
 
-## Create a New Branch
+### Create a New Branch
 
 Branching is the key concept in Git. And it works around the rule that the master branch is ALWAYS deployable.
 
@@ -746,7 +762,7 @@ When you make a new branch, you will (almost always) want to make it from the ma
 
 ***Note:** Keep in mind that you are working with others. Using descriptive names for new branches, so everyone can understand what is happening.*
 
-## Make Changes and Add Commits
+### Make Changes and Add Commits
 
 After the new branch is created, it is time to get to work. Make changes by adding, editing and deleting files. Whenever you reach a small milestone, add the changes to your branch by commit.
 
@@ -754,13 +770,13 @@ Adding commits keeps track of your work. Each commit should have a message expla
 
 ***Note:** commit messages are very important! Let everyone know what has changed and why. Messages and comments make it so much easier for yourself and other people to keep track of changes.*
 
-## Open a Pull Request
+### Open a Pull Request
 
 Pull requests are a key part of GitHub. A Pull Request notifies people you have changes ready for them to consider or review.
 
 You can ask others to review your changes or pull your contribution and merge it into their branch.
 
-## Review
+### Review
 When a Pull Request is made, it can be reviewed by whoever has the proper access to the branch. This is where good discussions and review of the changes happen.
 
 Pull Requests are designed to allow people to work together easily and produce better results together!
@@ -769,33 +785,33 @@ If you receive feedback and continue to improve your changes, you can push your 
 
 ***Note:** GitHub shows new commit and feedback in the "unified Pull Request view".*
 
-## Deploy
+### Deploy
 When the pull request has been reviewed and everything looks good, it is time for the final testing. GitHub allows you to deploy from a branch for final testing in production before merging with the master branch.
 
 If any issues arise, you can undo the changes by deploying the master branch into production again!
 
 ***Note:** Teams often have dedicated testing environments used for deploying branches.*
 
-## Merge
+### Merge
 After exhaustive testing, you can merge the code into the master branch!
 
 Pull Requests keep records of changes to your code, and if you commented and named changes well, you can go back and understand why changes and decisions were made.
 
 ***Note:** You can add keywords to your pull request for easier searching!*
 
-# Git GitHub Pages
+## Git GitHub Pages
 
-## Host Your Page on GitHub
+### Host Your Page on GitHub
 
 With GitHub pages, GitHub allows you to host a webpage from your repository. Let's try to use GitHub Pages to host our repository.
 
-## Create a New Repository
+### Create a New Repository
 
 Start by signing in to GitHub. GitHub pages need a special name and setup to work, so we start by creating a new repository.
 
 This repository needs a special name to function as a GitHub page. It needs to be your GitHub <font face="courier" style="color:coral">username</font>, followed by <font face="courier" style="color:coral">.github.io</font>.
 
-## Push Local Repository to GitHub Pages
+### Push Local Repository to GitHub Pages
 
 We add this new repository as a remote for our local repository, we are calling it <font face="courier" style="color:coral">gh-page</font> (for GitHub Pages).
 
@@ -811,7 +827,7 @@ Make sure you are on the <font face="courier" style="color:coral">master</font> 
 
 Check that the new repository has received all the files:
 
-## Check Out Your Own GitHub Page
+### Check Out Your Own GitHub Page
 
 That looks good, now click the Settings menu and navigate to the Pages tab:
 
