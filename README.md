@@ -7,3 +7,5 @@ This repository is built step by step in the tutorial.
 This line was added from the git-branch-tutorial branch
 
 This line was added from the emergency-fix
+
+This line is being added to show how to push changes to GitHub
