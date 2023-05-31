@@ -22,6 +22,7 @@ This markdown explains how to use Git and how to use it on remote repository pla
   * [Git GitHub Flow](#git-github-flow)
   * [Git GitHub Pages](#git-github-pages)
 * [ChatGPT](#chatgpt)
+  * [Conventional Commits](#conventional-commits)
 
 ## References
 * [Git Tutorial](https://www.w3schools.com/git/default.asp)
@@ -835,3 +836,155 @@ That looks good, now click the Settings menu and navigate to the Pages tab:
 The GitHub page is created, and you can click the URL to view the result!
 
 # ChatGPT
+
+## Conventional Commits
+
+When it comes to commenting commits with Git, there is a convention called "Conventional Commits" that provides a structured and standardized format for commit messages. Conventional Commits are widely adopted in the Git community and can help improve collaboration and understanding among developers. Here are the key guidelines:
+
+1. **Separate subject from body**: Start with a concise subject line, followed by an empty line, and then provide a more detailed description in the body of the commit message.
+
+2. **Subject line**: Keep the subject line clear, concise, and descriptive. It should be no more than 50 characters and written in the imperative mood (e.g., "Fix bug" instead of "Fixed bug" or "Fixes bug").
+
+3. **Use commit type**: Prepend the subject line with a commit type that describes the nature of the commit. Common types include:
+   - `feat`: A new feature added.
+   - `fix`: A bug fix.
+   - `docs`: Documentation changes.
+   - `style`: Code style/formatting changes.
+   - `refactor`: Code refactoring without feature changes.
+   - `test`: Adding or modifying tests.
+   - `chore`: Maintenance tasks or other changes that don't affect the code.
+
+4. **Provide a detailed body**: In the commit body, elaborate on what the commit does, why it was necessary, and any relevant details. Use the body to communicate intent, explain any trade-offs made, or reference relevant issues or discussions.
+
+5. **Use imperative mood**: Write commit messages in the present tense, using the imperative mood. For example, instead of saying "Fixed bug" or "Fixes bug," use "Fix bug."
+
+6. **Keep lines within 72 characters**: Try to limit each line in the commit message, including the subject and body, to a maximum of 72 characters. This helps with readability in various Git tools.
+
+Here's an example of a conventional commit message:
+
+```
+feat: Add user registration functionality
+
+- Created a new user registration endpoint
+- Implemented validation for email and password
+- Updated the user model to include registration date
+- Added corresponding tests for the new feature
+
+Closes #123
+```
+
+By following these guidelines, you can create well-structured commit messages that make it easier to track changes, understand the purpose of each commit, and generate meaningful release notes.
+
+Here are ten more examples of conventional commit messages related to front-end, back-end, and databases:
+
+1. **Front-end**:
+   ```
+   feat: Implement responsive design for product listing page
+
+   - Added media queries to adjust layout for different screen sizes
+   - Refactored CSS classes for improved readability and maintainability
+   - Updated product thumbnail images to optimize loading time
+
+   Closes #234
+   ```
+
+2. **Back-end**:
+   ```
+   fix: Handle null pointer exception in user authentication
+
+   - Added null check for user object before accessing properties
+   - Updated error handling to return appropriate HTTP response code
+   - Included unit test to verify the fix
+
+   Fixes #456
+   ```
+
+3. **Database**:
+   ```
+   feat: Create new table for customer orders
+
+   - Designed schema for orders table with necessary fields
+   - Created SQL migration script to generate the table
+   - Updated relevant models and queries to interact with the new table
+
+   Closes #789
+   ```
+
+4. **Front-end**:
+   ```
+   chore: Update package dependencies
+
+   - Bumped version of React to 17.0.2
+   - Updated CSS framework to the latest release
+   - Removed unused packages from package.json
+
+   Closes #987
+   ```
+
+5. **Back-end**:
+   ```
+   refactor: Extract common authentication logic into a separate module
+
+   - Moved authentication middleware to a new module for reusability
+   - Updated endpoints to use the new authentication module
+   - Verified functionality with existing integration tests
+
+   Closes #321
+   ```
+
+6. **Database**:
+   ```
+   fix: Correct foreign key constraint in orders table
+
+   - Identified incorrect foreign key reference in the orders table
+   - Modified the constraint to reference the correct table and column
+   - Tested the fix by inserting and retrieving data from the related tables
+
+   Fixes #654
+   ```
+
+7. **Front-end**:
+   ```
+   docs: Add JSDoc comments to the main app component
+
+   - Documented component props, state, and functions using JSDoc syntax
+   - Included descriptions and examples for better code understanding
+   - Updated the generated documentation site with the new comments
+
+   Closes #432
+   ```
+
+8. **Back-end**:
+   ```
+   feat: Implement user profile picture upload endpoint
+
+   - Created a new API endpoint to handle profile picture uploads
+   - Configured storage system for image persistence
+   - Validated file types and sizes on the server side
+
+   Closes #765
+   ```
+
+9. **Database**:
+   ```
+   style: Format SQL queries in the orders table migration
+
+   - Adjusted indentation and line breaks for better readability
+   - Applied consistent naming conventions to table and column names
+   - Ensured all queries were properly terminated with semicolons
+
+   Closes #654
+   ```
+
+10. **Front-end**:
+    ```
+    test: Add unit tests for user registration form validation
+
+    - Created test cases to verify validation rules for email and password fields
+    - Mocked form submissions and checked error messages
+    - Ensured validation logic was triggered on form interactions
+
+    Closes #123
+    ```
+
+Remember that these examples are just guidelines, and you can adapt the format to suit the needs and conventions of your specific project or team.
