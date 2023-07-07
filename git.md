@@ -846,20 +846,73 @@ When it comes to commenting commits with Git, there is a convention called "Conv
 
 2. **Subject line**: Keep the subject line clear, concise, and descriptive. It should be no more than 50 characters and written in the imperative mood (e.g., "Fix bug" instead of "Fixed bug" or "Fixes bug").
 
-3. **Use commit type**: Prepend the subject line with a commit type that describes the nature of the commit. Common types include:
-   - `feat`: A new feature added.
-   - `fix`: A bug fix.
-   - `docs`: Documentation changes.
-   - `style`: Code style/formatting changes.
-   - `refactor`: Code refactoring without feature changes.
-   - `test`: Adding or modifying tests.
-   - `chore`: Maintenance tasks or other changes that don't affect the code.
+3. **Use commit type**: Prepend the subject line with a commit type that describes the nature of the commit.
 
-4. **Provide a detailed body**: In the commit body, elaborate on what the commit does, why it was necessary, and any relevant details. Use the body to communicate intent, explain any trade-offs made, or reference relevant issues or discussions.
+Common types include:
+- `feat`: A new feature added.
+- `fix`: A bug fix.
+- `docs`: Documentation changes.
+- `style`: Code style/formatting changes.
+- `refactor`: Code refactoring without feature changes.
+- `test`: Adding or modifying tests.
+- `chore`: Maintenance tasks or other changes that don't affect the code.
 
-5. **Use imperative mood**: Write commit messages in the present tense, using the imperative mood. For example, instead of saying "Fixed bug" or "Fixes bug," use "Fix bug."
+Comprehensive commit type list:
+- `analytics`: Adding or modifying analytics tracking or reporting.
+- `build`: Changes related to the build system or dependencies.
+- `build fix`: Fixing issues related to the build process.
+- `bug`: A commit specifically addressing a bug.
+- `chore`: Maintenance tasks or other changes that don't affect the code.
+- `cleanup`: Removing unused code, comments, or resources.
+- `config`: Changes to configuration files or settings.
+- `data`: Changes to data files or data management.
+- `deprecation`: Marking a feature or functionality as deprecated.
+- `deps`: Updates or modifications to dependencies.
+- `design`: Changes related to the design or user interface (UI) of the application.
+- `docs`: Documentation changes.
+- `downgrade`: Downgrading project components or dependencies.
+- `experimental`: Commit related to experimental features or changes.
+- `feat`: Adding a new feature or functionality to the application.
+- `feedback`: Commit related to addressing feedback or code review comments.
+- `fix`: A bug fix.
+- `fixup`: A commit fixing a previous commit.
+- `hotfix`: A commit addressing a critical issue or bug that requires immediate attention.
+- `ignore`: Ignoring specific files, directories, or patterns.
+- `init`: Initial commit or project setup.
+- `license`: Adding or modifying license information.
+- `lint`: Commit addressing linting issues or code style violations.
+- `log`: Adding or modifying logging statements or logs.
+- `merge`: A commit related to merging branches or resolving merge conflicts.
+- `merge conflict`: Commit specifically related to resolving merge conflicts.
+- `merge upstream`: Commit related to merging changes from an upstream repository.
+- `migrate`: Database migration or data transfer.
+- `optimize`: Optimization of existing code or algorithms.
+- `performance`: Changes aimed at improving performance.
+- `polish`: Commit related to code or documentation polishing.
+- `perf`: Performance-related changes or optimizations.
+- `refactor`: Code refactoring without feature changes.
+- `release`: Changes related to creating a new release or version of the software.
+- `release notes`: Commit related to updating release notes or changelogs.
+- `reformat`: Changes to the formatting or structure of code or files.
+- `revert`: Reverting a previous commit or changeset.
+- `security`: Changes addressing security vulnerabilities or improving security measures.
+- `security fix`: Commit addressing security vulnerabilities or fixes.
+- `stub`: Adding placeholder code or stubs for future development.
+- `style`: Code style or formatting changes.
+- `sync`: Commit related to syncing or aligning with another branch or repository.
+- `test`: Adding or modifying tests.
+- `typo`: A commit fixing typos or minor text errors.
+- `upgrade`: Upgrading project components or dependencies.
+- `vendor`: Updates or modifications to third-party libraries or dependencies.
+- `version bump`: Incrementing the version number of the project.
+- `versioning`: Changes related to versioning or updating version numbers.
+- `workflow`: Changes to project workflows or automation scripts.
 
-6. **Keep lines within 72 characters**: Try to limit each line in the commit message, including the subject and body, to a maximum of 72 characters. This helps with readability in various Git tools.
+5. **Provide a detailed body**: In the commit body, elaborate on what the commit does, why it was necessary, and any relevant details. Use the body to communicate intent, explain any trade-offs made, or reference relevant issues or discussions.
+
+6. **Use imperative mood**: Write commit messages in the present tense, using the imperative mood. For example, instead of saying "Fixed bug" or "Fixes bug," use "Fix bug."
+
+7. **Keep lines within 72 characters**: Try to limit each line in the commit message, including the subject and body, to a maximum of 72 characters. This helps with readability in various Git tools.
 
 Here's an example of a conventional commit message:
 
