@@ -863,6 +863,7 @@ Comprehensive commit type list:
 - `build fix`: Fixing issues related to the build process.
 - `bug`: A commit specifically addressing a bug.
 - `chore`: Maintenance tasks or other changes that don't affect the code.
+- `ci`: Changes to our CI configuration files and scripts (example scopes: azuredevops.yaml, Travis, Circle, BrowserStack, SauceLabs)
 - `cleanup`: Removing unused code, comments, or resources.
 - `config`: Changes to configuration files or settings.
 - `data`: Changes to data files or data management.
