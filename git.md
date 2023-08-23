@@ -869,7 +869,7 @@ Comprehensive commit type list:
 - `deprecation`: Marking a feature or functionality as deprecated.
 - `deps`: Updates or modifications to dependencies.
 - `design`: Changes related to the design or user interface (UI) of the application.
-- `docs`: Documentation changes.
+- `docs`: The "docs" scope is commonly used for changes that involve documentation, including adding, updating, or improving documentation files like READMEs, license files, and configuration files
 - `downgrade`: Downgrading project components or dependencies.
 - `experimental`: Commit related to experimental features or changes.
 - `feat`: Adding a new feature or functionality to the application.
