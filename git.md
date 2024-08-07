@@ -2,6 +2,13 @@
 
 This markdown explains how to use Git and how to use it on remote repository platforms, like GitHub.
 
+## Commit Types
+### Docs
+- add
+- update
+- edit
+### Feat
+
 # Table of Contents
 * [Git Tutorial](#git-tutorial)
   * [Git and GitHub Introduction](#git-and-github-introduction)
