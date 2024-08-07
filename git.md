@@ -2,12 +2,24 @@
 
 This markdown explains how to use Git and how to use it on remote repository platforms, like GitHub.
 
-## Commit Types
-### Docs
+## Common Commit Types
+
+- `feat`: A new feature added.
+- `fix`: A bug fix.
+- `docs`: Documentation changes.
+- `style`: Code style/formatting changes.
+- `refactor`: Code refactoring without feature changes.
+- `test`: Adding or modifying tests.
+- `chore`: Maintenance tasks or other changes that don't affect the code.
+
+File descriptions
 - add
 - update
 - edit
-### Feat
+
+Links
+https://www.conventionalcommits.org/en/v1.0.0/
+https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 
 # Table of Contents
 * [Git Tutorial](#git-tutorial)
